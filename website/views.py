@@ -6,6 +6,7 @@ def home(request):
 def about(request):
 	return render(request, 'about.html',{})
 
+
 def contact(request):
 	if request.method == "POST":
 		message_name = request.POST['message-name']
@@ -24,3 +25,7 @@ def contact(request):
 
 	else:
 		return render(request, 'contact.html',{})
+
+
+def service(request):
+	return render(request, 'service.html',{})
